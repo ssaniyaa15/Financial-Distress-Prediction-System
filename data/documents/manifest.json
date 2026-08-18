@@ -1,0 +1,562 @@
+[
+  {
+    "company_id": "PL-03574",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-03574.pdf",
+    "image": "data/images/PL-03574.png",
+    "text": "data/text/PL-03574.txt"
+  },
+  {
+    "company_id": "PL-09056",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-09056.pdf",
+    "image": "data/images/PL-09056.png",
+    "text": "data/text/PL-09056.txt"
+  },
+  {
+    "company_id": "PL-00568",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-00568.pdf",
+    "image": "data/images/PL-00568.png",
+    "text": "data/text/PL-00568.txt"
+  },
+  {
+    "company_id": "PL-03160",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-03160.pdf",
+    "image": "data/images/PL-03160.png",
+    "text": "data/text/PL-03160.txt"
+  },
+  {
+    "company_id": "PL-01558",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-01558.pdf",
+    "image": "data/images/PL-01558.png",
+    "text": "data/text/PL-01558.txt"
+  },
+  {
+    "company_id": "PL-03091",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-03091.pdf",
+    "image": "data/images/PL-03091.png",
+    "text": "data/text/PL-03091.txt"
+  },
+  {
+    "company_id": "PL-07835",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-07835.pdf",
+    "image": "data/images/PL-07835.png",
+    "text": "data/text/PL-07835.txt"
+  },
+  {
+    "company_id": "PL-03577",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-03577.pdf",
+    "image": "data/images/PL-03577.png",
+    "text": "data/text/PL-03577.txt"
+  },
+  {
+    "company_id": "PL-01794",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-01794.pdf",
+    "image": "data/images/PL-01794.png",
+    "text": "data/text/PL-01794.txt"
+  },
+  {
+    "company_id": "PL-07851",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-07851.pdf",
+    "image": "data/images/PL-07851.png",
+    "text": "data/text/PL-07851.txt"
+  },
+  {
+    "company_id": "PL-00107",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-00107.pdf",
+    "image": "data/images/PL-00107.png",
+    "text": "data/text/PL-00107.txt"
+  },
+  {
+    "company_id": "PL-01747",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-01747.pdf",
+    "image": "data/images/PL-01747.png",
+    "text": "data/text/PL-01747.txt"
+  },
+  {
+    "company_id": "PL-00704",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-00704.pdf",
+    "image": "data/images/PL-00704.png",
+    "text": "data/text/PL-00704.txt"
+  },
+  {
+    "company_id": "PL-09973",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-09973.pdf",
+    "image": "data/images/PL-09973.png",
+    "text": "data/text/PL-09973.txt"
+  },
+  {
+    "company_id": "PL-02908",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-02908.pdf",
+    "image": "data/images/PL-02908.png",
+    "text": "data/text/PL-02908.txt"
+  },
+  {
+    "company_id": "PL-02794",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-02794.pdf",
+    "image": "data/images/PL-02794.png",
+    "text": "data/text/PL-02794.txt"
+  },
+  {
+    "company_id": "PL-00311",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-00311.pdf",
+    "image": "data/images/PL-00311.png",
+    "text": "data/text/PL-00311.txt"
+  },
+  {
+    "company_id": "PL-08264",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-08264.pdf",
+    "image": "data/images/PL-08264.png",
+    "text": "data/text/PL-08264.txt"
+  },
+  {
+    "company_id": "PL-08625",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-08625.pdf",
+    "image": "data/images/PL-08625.png",
+    "text": "data/text/PL-08625.txt"
+  },
+  {
+    "company_id": "PL-03433",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-03433.pdf",
+    "image": "data/images/PL-03433.png",
+    "text": "data/text/PL-03433.txt"
+  },
+  {
+    "company_id": "PL-09835",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-09835.pdf",
+    "image": "data/images/PL-09835.png",
+    "text": "data/text/PL-09835.txt"
+  },
+  {
+    "company_id": "PL-08204",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-08204.pdf",
+    "image": "data/images/PL-08204.png",
+    "text": "data/text/PL-08204.txt"
+  },
+  {
+    "company_id": "PL-06504",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-06504.pdf",
+    "image": "data/images/PL-06504.png",
+    "text": "data/text/PL-06504.txt"
+  },
+  {
+    "company_id": "PL-08738",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-08738.pdf",
+    "image": "data/images/PL-08738.png",
+    "text": "data/text/PL-08738.txt"
+  },
+  {
+    "company_id": "PL-02689",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-02689.pdf",
+    "image": "data/images/PL-02689.png",
+    "text": "data/text/PL-02689.txt"
+  },
+  {
+    "company_id": "PL-07144",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-07144.pdf",
+    "image": "data/images/PL-07144.png",
+    "text": "data/text/PL-07144.txt"
+  },
+  {
+    "company_id": "PL-04830",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-04830.pdf",
+    "image": "data/images/PL-04830.png",
+    "text": "data/text/PL-04830.txt"
+  },
+  {
+    "company_id": "PL-03378",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-03378.pdf",
+    "image": "data/images/PL-03378.png",
+    "text": "data/text/PL-03378.txt"
+  },
+  {
+    "company_id": "PL-06909",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-06909.pdf",
+    "image": "data/images/PL-06909.png",
+    "text": "data/text/PL-06909.txt"
+  },
+  {
+    "company_id": "PL-05198",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-05198.pdf",
+    "image": "data/images/PL-05198.png",
+    "text": "data/text/PL-05198.txt"
+  },
+  {
+    "company_id": "PL-06410",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-06410.pdf",
+    "image": "data/images/PL-06410.png",
+    "text": "data/text/PL-06410.txt"
+  },
+  {
+    "company_id": "PL-01056",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-01056.pdf",
+    "image": "data/images/PL-01056.png",
+    "text": "data/text/PL-01056.txt"
+  },
+  {
+    "company_id": "PL-06536",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-06536.pdf",
+    "image": "data/images/PL-06536.png",
+    "text": "data/text/PL-06536.txt"
+  },
+  {
+    "company_id": "PL-09138",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-09138.pdf",
+    "image": "data/images/PL-09138.png",
+    "text": "data/text/PL-09138.txt"
+  },
+  {
+    "company_id": "PL-02478",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-02478.pdf",
+    "image": "data/images/PL-02478.png",
+    "text": "data/text/PL-02478.txt"
+  },
+  {
+    "company_id": "PL-07968",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-07968.pdf",
+    "image": "data/images/PL-07968.png",
+    "text": "data/text/PL-07968.txt"
+  },
+  {
+    "company_id": "PL-08039",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-08039.pdf",
+    "image": "data/images/PL-08039.png",
+    "text": "data/text/PL-08039.txt"
+  },
+  {
+    "company_id": "PL-06100",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-06100.pdf",
+    "image": "data/images/PL-06100.png",
+    "text": "data/text/PL-06100.txt"
+  },
+  {
+    "company_id": "PL-02922",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-02922.pdf",
+    "image": "data/images/PL-02922.png",
+    "text": "data/text/PL-02922.txt"
+  },
+  {
+    "company_id": "PL-01937",
+    "bankrupt": 0,
+    "pdf": "data/documents/PL-01937.pdf",
+    "image": "data/images/PL-01937.png",
+    "text": "data/text/PL-01937.txt"
+  },
+  {
+    "company_id": "PL-10464",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10464.pdf",
+    "image": "data/images/PL-10464.png",
+    "text": "data/text/PL-10464.txt"
+  },
+  {
+    "company_id": "PL-10081",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10081.pdf",
+    "image": "data/images/PL-10081.png",
+    "text": "data/text/PL-10081.txt"
+  },
+  {
+    "company_id": "PL-10318",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10318.pdf",
+    "image": "data/images/PL-10318.png",
+    "text": "data/text/PL-10318.txt"
+  },
+  {
+    "company_id": "PL-10183",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10183.pdf",
+    "image": "data/images/PL-10183.png",
+    "text": "data/text/PL-10183.txt"
+  },
+  {
+    "company_id": "PL-10341",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10341.pdf",
+    "image": "data/images/PL-10341.png",
+    "text": "data/text/PL-10341.txt"
+  },
+  {
+    "company_id": "PL-10212",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10212.pdf",
+    "image": "data/images/PL-10212.png",
+    "text": "data/text/PL-10212.txt"
+  },
+  {
+    "company_id": "PL-10163",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10163.pdf",
+    "image": "data/images/PL-10163.png",
+    "text": "data/text/PL-10163.txt"
+  },
+  {
+    "company_id": "PL-10063",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10063.pdf",
+    "image": "data/images/PL-10063.png",
+    "text": "data/text/PL-10063.txt"
+  },
+  {
+    "company_id": "PL-10328",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10328.pdf",
+    "image": "data/images/PL-10328.png",
+    "text": "data/text/PL-10328.txt"
+  },
+  {
+    "company_id": "PL-10017",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10017.pdf",
+    "image": "data/images/PL-10017.png",
+    "text": "data/text/PL-10017.txt"
+  },
+  {
+    "company_id": "PL-10112",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10112.pdf",
+    "image": "data/images/PL-10112.png",
+    "text": "data/text/PL-10112.txt"
+  },
+  {
+    "company_id": "PL-10207",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10207.pdf",
+    "image": "data/images/PL-10207.png",
+    "text": "data/text/PL-10207.txt"
+  },
+  {
+    "company_id": "PL-10258",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10258.pdf",
+    "image": "data/images/PL-10258.png",
+    "text": "data/text/PL-10258.txt"
+  },
+  {
+    "company_id": "PL-10200",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10200.pdf",
+    "image": "data/images/PL-10200.png",
+    "text": "data/text/PL-10200.txt"
+  },
+  {
+    "company_id": "PL-10109",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10109.pdf",
+    "image": "data/images/PL-10109.png",
+    "text": "data/text/PL-10109.txt"
+  },
+  {
+    "company_id": "PL-10297",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10297.pdf",
+    "image": "data/images/PL-10297.png",
+    "text": "data/text/PL-10297.txt"
+  },
+  {
+    "company_id": "PL-10458",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10458.pdf",
+    "image": "data/images/PL-10458.png",
+    "text": "data/text/PL-10458.txt"
+  },
+  {
+    "company_id": "PL-10038",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10038.pdf",
+    "image": "data/images/PL-10038.png",
+    "text": "data/text/PL-10038.txt"
+  },
+  {
+    "company_id": "PL-10145",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10145.pdf",
+    "image": "data/images/PL-10145.png",
+    "text": "data/text/PL-10145.txt"
+  },
+  {
+    "company_id": "PL-10493",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10493.pdf",
+    "image": "data/images/PL-10493.png",
+    "text": "data/text/PL-10493.txt"
+  },
+  {
+    "company_id": "PL-10439",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10439.pdf",
+    "image": "data/images/PL-10439.png",
+    "text": "data/text/PL-10439.txt"
+  },
+  {
+    "company_id": "PL-10295",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10295.pdf",
+    "image": "data/images/PL-10295.png",
+    "text": "data/text/PL-10295.txt"
+  },
+  {
+    "company_id": "PL-10497",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10497.pdf",
+    "image": "data/images/PL-10497.png",
+    "text": "data/text/PL-10497.txt"
+  },
+  {
+    "company_id": "PL-10080",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10080.pdf",
+    "image": "data/images/PL-10080.png",
+    "text": "data/text/PL-10080.txt"
+  },
+  {
+    "company_id": "PL-10071",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10071.pdf",
+    "image": "data/images/PL-10071.png",
+    "text": "data/text/PL-10071.txt"
+  },
+  {
+    "company_id": "PL-10101",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10101.pdf",
+    "image": "data/images/PL-10101.png",
+    "text": "data/text/PL-10101.txt"
+  },
+  {
+    "company_id": "PL-10375",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10375.pdf",
+    "image": "data/images/PL-10375.png",
+    "text": "data/text/PL-10375.txt"
+  },
+  {
+    "company_id": "PL-10486",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10486.pdf",
+    "image": "data/images/PL-10486.png",
+    "text": "data/text/PL-10486.txt"
+  },
+  {
+    "company_id": "PL-10085",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10085.pdf",
+    "image": "data/images/PL-10085.png",
+    "text": "data/text/PL-10085.txt"
+  },
+  {
+    "company_id": "PL-10076",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10076.pdf",
+    "image": "data/images/PL-10076.png",
+    "text": "data/text/PL-10076.txt"
+  },
+  {
+    "company_id": "PL-10446",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10446.pdf",
+    "image": "data/images/PL-10446.png",
+    "text": "data/text/PL-10446.txt"
+  },
+  {
+    "company_id": "PL-10084",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10084.pdf",
+    "image": "data/images/PL-10084.png",
+    "text": "data/text/PL-10084.txt"
+  },
+  {
+    "company_id": "PL-10148",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10148.pdf",
+    "image": "data/images/PL-10148.png",
+    "text": "data/text/PL-10148.txt"
+  },
+  {
+    "company_id": "PL-10010",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10010.pdf",
+    "image": "data/images/PL-10010.png",
+    "text": "data/text/PL-10010.txt"
+  },
+  {
+    "company_id": "PL-10490",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10490.pdf",
+    "image": "data/images/PL-10490.png",
+    "text": "data/text/PL-10490.txt"
+  },
+  {
+    "company_id": "PL-10087",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10087.pdf",
+    "image": "data/images/PL-10087.png",
+    "text": "data/text/PL-10087.txt"
+  },
+  {
+    "company_id": "PL-10216",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10216.pdf",
+    "image": "data/images/PL-10216.png",
+    "text": "data/text/PL-10216.txt"
+  },
+  {
+    "company_id": "PL-10190",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10190.pdf",
+    "image": "data/images/PL-10190.png",
+    "text": "data/text/PL-10190.txt"
+  },
+  {
+    "company_id": "PL-10470",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10470.pdf",
+    "image": "data/images/PL-10470.png",
+    "text": "data/text/PL-10470.txt"
+  },
+  {
+    "company_id": "PL-10320",
+    "bankrupt": 1,
+    "pdf": "data/documents/PL-10320.pdf",
+    "image": "data/images/PL-10320.png",
+    "text": "data/text/PL-10320.txt"
+  }
+]

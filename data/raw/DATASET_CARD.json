@@ -1,0 +1,17 @@
+{
+  "dataset": "UCI Polish Companies Bankruptcy (3rd year)",
+  "source_csv": "/Users/vardaanagrawal/VARDAAN/COLLEGE/coding/finalFINANCE/data/raw/bankruptcy_year3.csv",
+  "citation": "Zieba, Tomczak, Tomczak (2016). Expert Systems with Applications.",
+  "license": "CC BY 4.0",
+  "n_rows": 10503,
+  "n_features": 64,
+  "target": "bankrupt (1 = filed within 3 years)",
+  "class_counts": {
+    "0": 10008,
+    "1": 495
+  },
+  "positive_rate": 0.04712939160239932,
+  "missing_cells": 9888,
+  "join_limitation": "Source rows are anonymized Polish firms. Text, PDF, and image modalities are reconstructed from the same ratio vector so labels stay real.",
+  "sec_samples": "Optional OCR smoke-test files in data/sec_samples; not used for training labels."
+}

@@ -1,0 +1,65 @@
+attribute,short_name,definition,family,missing_pct
+Attr1,ROA (net profit / assets),net profit / total assets,Profitability,0.0
+Attr2,Debt ratio (liabilities / assets),total liabilities / total assets,Leverage & solvency,0.0
+Attr3,Working capital / assets,working capital / total assets,Liquidity,0.0
+Attr4,Current ratio,current assets / short-term liabilities,Liquidity,0.17
+Attr5,Defensive interval (days),[(cash + short-term securities + receivables - short-term liabilities) / (operating expenses - depreciation)] * 365,Liquidity,0.24
+Attr6,Retained earnings / assets,retained earnings / total assets,Profitability,0.0
+Attr7,EBIT / assets (ROA-EBIT),EBIT / total assets,Profitability,0.0
+Attr8,Equity / liabilities,book value of equity / total liabilities,Leverage & solvency,0.13
+Attr9,Asset turnover,sales / total assets,Efficiency & activity,0.03
+Attr10,Equity ratio,equity / total assets,Leverage & solvency,0.0
+Attr11,Pre-financing return / assets,(gross profit + extraordinary items + financial expenses) / total assets,Profitability,0.0
+Attr12,Gross profit / ST liabilities,gross profit / short-term liabilities,Liquidity,0.17
+Attr13,(Gross profit + dep.) / sales,(gross profit + depreciation) / sales,Profitability,0.41
+Attr14,(Gross profit + interest) / assets,(gross profit + interest) / total assets,Profitability,0.0
+Attr15,Liabilities / cash earnings (days),(total liabilities * 365) / (gross profit + depreciation),Leverage & solvency,0.08
+Attr16,Cash earnings / liabilities,(gross profit + depreciation) / total liabilities,Leverage & solvency,0.13
+Attr17,Assets / liabilities,total assets / total liabilities,Leverage & solvency,0.13
+Attr18,Gross margin on assets,gross profit / total assets,Profitability,0.0
+Attr19,Gross margin,gross profit / sales,Profitability,0.41
+Attr20,Inventory days,(inventory * 365) / sales,Efficiency & activity,0.41
+Attr21,Sales growth,sales (n) / sales (n-1),Growth & size,7.68
+Attr22,Operating ROA,profit on operating activities / total assets,Profitability,0.0
+Attr23,Net margin,net profit / sales,Profitability,0.41
+Attr24,3-yr gross profit / assets,gross profit (in 3 years) / total assets,Profitability,2.16
+Attr25,Reserves / assets,(equity - share capital) / total assets,Leverage & solvency,0.0
+Attr26,Cash earnings / liabilities (net),(net profit + depreciation) / total liabilities,Leverage & solvency,0.13
+Attr27,Interest cover (operating),profit on operating activities / financial expenses,Leverage & solvency,6.81
+Attr28,Working capital / fixed assets,working capital / fixed assets,Liquidity,2.17
+Attr29,Log(total assets) - size,logarithm of total assets,Growth & size,0.0
+Attr30,Net debt / sales,(total liabilities - cash) / sales,Leverage & solvency,0.41
+Attr31,EBIT margin proxy,(gross profit + interest) / sales,Profitability,0.41
+Attr32,Payable days (on COGS),(current liabilities * 365) / cost of products sold,Efficiency & activity,0.96
+Attr33,Opex / ST liabilities,operating expenses / short-term liabilities,Liquidity,0.17
+Attr34,Opex / liabilities,operating expenses / total liabilities,Liquidity,0.13
+Attr35,Profit on sales / assets,profit on sales / total assets,Profitability,0.0
+Attr36,Total sales / assets,total sales / total assets,Efficiency & activity,0.0
+Attr37,Quick assets / LT liabilities,(current assets - inventories) / long-term liabilities,Liquidity,45.09
+Attr38,Constant capital / assets,constant capital / total assets,Leverage & solvency,0.0
+Attr39,Operating margin (on sales),profit on sales / sales,Profitability,0.41
+Attr40,Cash ratio,(current assets - inventory - receivables) / short-term liabilities,Liquidity,0.17
+Attr41,Liabilities / cash flow (months),total liabilities / ((profit on operating activities + depreciation) * (12/365)),Leverage & solvency,1.92
+Attr42,Operating margin,profit on operating activities / sales,Profitability,0.41
+Attr43,Receivable + inventory days,rotation receivables + inventory turnover in days,Efficiency & activity,0.41
+Attr44,Receivable days,(receivables * 365) / sales,Efficiency & activity,0.41
+Attr45,Net profit / inventory,net profit / inventory,Efficiency & activity,5.63
+Attr46,Quick ratio,(current assets - inventory) / short-term liabilities,Liquidity,0.17
+Attr47,Inventory days (on COGS),(inventory * 365) / cost of products sold,Efficiency & activity,0.82
+Attr48,EBITDA / assets,EBITDA (profit on operating activities - depreciation) / total assets,Profitability,0.0
+Attr49,EBITDA margin,EBITDA (profit on operating activities - depreciation) / sales,Profitability,0.41
+Attr50,Current assets / liabilities,current assets / total liabilities,Liquidity,0.13
+Attr51,ST liabilities / assets,short-term liabilities / total assets,Leverage & solvency,0.0
+Attr52,ST liability days (on COGS),(short-term liabilities * 365) / cost of products sold,Efficiency & activity,0.82
+Attr53,Equity / fixed assets,equity / fixed assets,Leverage & solvency,2.17
+Attr54,Constant capital / fixed assets,constant capital / fixed assets,Leverage & solvency,2.17
+Attr55,Working capital (absolute),working capital,Liquidity,0.0
+Attr56,Gross margin (COGS basis),(sales - cost of products sold) / sales,Profitability,0.41
+Attr57,Net quick assets / cash costs,(current assets - inventory - short-term liabilities) / (sales - gross profit - depreciation),Liquidity,0.0
+Attr58,Total costs / sales,total costs / total sales,Efficiency & activity,0.28
+Attr59,LT liabilities / equity,long-term liabilities / equity,Leverage & solvency,0.0
+Attr60,Inventory turnover,sales / inventory,Efficiency & activity,5.64
+Attr61,Receivables turnover,sales / receivables,Efficiency & activity,0.16
+Attr62,ST liability days (on sales),(short-term liabilities * 365) / sales,Efficiency & activity,0.41
+Attr63,Sales / ST liabilities,sales / short-term liabilities,Efficiency & activity,0.17
+Attr64,Fixed asset turnover,sales / fixed assets,Efficiency & activity,2.17

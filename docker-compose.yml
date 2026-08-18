@@ -1,0 +1,63 @@
+services:
+  data_service:
+    build:
+      context: .
+      dockerfile: services/data_service/Dockerfile
+    ports: ["8001:8001"]
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    env_file: [.env]
+
+  ml_service:
+    build:
+      context: .
+      dockerfile: services/ml_service/Dockerfile
+    ports: ["8002:8002"]
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    env_file: [.env]
+    depends_on: [data_service]
+
+  ocr_service:
+    build:
+      context: .
+      dockerfile: services/ocr_service/Dockerfile
+    ports: ["8003:8003"]
+    env_file: [.env]
+
+  vision_service:
+    build:
+      context: .
+      dockerfile: services/vision_service/Dockerfile
+    ports: ["8004:8004"]
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    env_file: [.env]
+
+  llm_service:
+    build:
+      context: .
+      dockerfile: services/llm_service/Dockerfile
+    ports: ["8005:8005"]
+    env_file: [.env]
+
+  fusion_service:
+    build:
+      context: .
+      dockerfile: services/fusion_service/Dockerfile
+    ports: ["8000:8000"]
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./frontend:/app/frontend
+    env_file: [.env]
+    environment:
+      DATA_SERVICE_URL: http://data_service:8001
+      ML_SERVICE_URL: http://ml_service:8002
+      OCR_SERVICE_URL: http://ocr_service:8003
+      VISION_SERVICE_URL: http://vision_service:8004
+      LLM_SERVICE_URL: http://llm_service:8005
+    depends_on: [data_service, ml_service, ocr_service, vision_service, llm_service]

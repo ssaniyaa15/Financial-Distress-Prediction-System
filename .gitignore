@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.env
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+data/processed/predictions.db
+.cursor/
+

@@ -9,4 +9,5 @@ __pycache__/
 .ruff_cache/
 data/processed/predictions.db
 .cursor/
+SolvencyLens_INTERVIEW_PREP.md
 

@@ -35,6 +35,11 @@ class RiskReport(BaseModel):
     risk_level: str
     confidence: float
     contributing_factors: list[str] = Field(default_factory=list)
+    shap_explanations: list[dict[str, Any]] = Field(default_factory=list)
+    rule_based_factors: list[str] = Field(default_factory=list)
+    explanation_source: str = "shap"
+    decision_threshold: float | None = None
+    structured_predicted_label: int | None = None
     llm_outputs: list[LLMRiskOutput] = Field(default_factory=list)
     ocr_text: str = ""
     extracted_fields: dict[str, Any] = Field(default_factory=dict)

@@ -7,6 +7,7 @@ from typing import Any
 import numpy as np
 from sklearn.metrics import (
     accuracy_score,
+    average_precision_score,
     f1_score,
     precision_score,
     recall_score,
@@ -27,8 +28,12 @@ def classification_metrics(
     }
     if y_proba is not None and len(np.unique(y_true)) > 1:
         metrics["roc_auc"] = float(roc_auc_score(y_true, y_proba))
+        # PR-AUC (average precision) is the ranking metric that matters when the
+        # positive class is ~5%; ROC-AUC can look strong while precision stays modest.
+        metrics["pr_auc"] = float(average_precision_score(y_true, y_proba))
     else:
         metrics["roc_auc"] = float("nan")
+        metrics["pr_auc"] = float("nan")
     return metrics
 
 

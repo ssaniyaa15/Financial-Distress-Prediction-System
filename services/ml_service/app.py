@@ -11,6 +11,7 @@ from functools import lru_cache
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
+from shared.explain import format_shap_factor
 from shared.inference import ModelBundle
 from shared.logging_utils import get_logger
 from shared.metrics import risk_level_from_score
@@ -41,10 +42,17 @@ def predict(payload: PredictIn) -> dict:
     narrative = payload.narrative or generate_narrative(payload.features)
     structured = models.structured_proba(payload.features)
     text, _ = models.text_proba_and_embedding(narrative)
+    shap_items = models.shap_explanations(payload.features, k=5)
+    threshold = models.decision_threshold
     return {
         "structured_risk": structured,
         "text_risk": text,
         "structured_level": risk_level_from_score(structured),
         "text_level": risk_level_from_score(text),
         "structured_model": models.structured_name,
+        "decision_threshold": threshold,
+        "structured_predicted_label": int(structured >= threshold),
+        "shap_explanations": shap_items,
+        "contributing_factors": [format_shap_factor(item) for item in shap_items],
+        "explanation_source": "shap" if shap_items else "unavailable",
     }

@@ -96,10 +96,11 @@ def main() -> None:
         pred, proba = _predict(model, val_loader, device)
         metrics = classification_metrics(labels(val), pred, proba)
         logger.info(
-            "epoch %s loss=%.4f val_auc=%.4f val_f1=%.4f",
+            "epoch %s loss=%.4f val_auc=%.4f val_pr_auc=%.4f val_f1=%.4f",
             epoch,
             running / len(train),
             metrics["roc_auc"],
+            metrics["pr_auc"],
             metrics["f1"],
         )
         if metrics["roc_auc"] > best_auc:

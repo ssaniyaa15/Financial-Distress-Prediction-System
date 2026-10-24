@@ -157,9 +157,23 @@
       return "This profile is mixed. Some warning signs, but not a clear distress case.";
     }
 
+    function shapLine(item) {
+      if (typeof item === "string") return `<li>${item}</li>`;
+      const dir = item.direction === "increases"
+        ? "increases distress risk"
+        : "decreases distress risk";
+      const value = Number(item.shap_value);
+      const signed = Number.isFinite(value) ? (value >= 0 ? "+" : "") + value.toFixed(4) : "n/a";
+      return `<li><strong>${item.feature}</strong> — ${item.label}: SHAP ${signed} (${dir})</li>`;
+    }
+
     function render(data) {
       const level = (data.risk_level || "medium").toLowerCase();
-      const factors = (data.contributing_factors || []).map(item => `<li>${item}</li>`).join("");
+      const shapItems = (data.shap_explanations && data.shap_explanations.length)
+        ? data.shap_explanations
+        : (data.contributing_factors || []);
+      const shapList = shapItems.map(shapLine).join("");
+      const rules = (data.rule_based_factors || []).map(item => `<li>${item}</li>`).join("");
       const llms = (data.llm_outputs || []).map(item =>
         `<p><strong>${item.model_name}</strong> (${item.risk_level}): ${item.reasoning}</p>`
       ).join("");
@@ -169,8 +183,10 @@
           <h2>${data.company_name || data.company_id}</h2>
           <p>Overall risk: <strong>${String(level).toUpperCase()}</strong> (${pct(data.final_risk_score)}). Confidence ${pct(data.confidence)}.</p>
           <p>${meaning(level)}</p>
-          <h3>Why</h3>
-          <ul>${factors}</ul>
+          <h3>Why (SHAP)</h3>
+          <p class="hint">Top 5 financial ratios by |SHAP value| from TreeExplainer on the structured model. Positive values push the prediction toward distress.</p>
+          <ul>${shapList || "<li>SHAP explanation unavailable for this row.</li>"}</ul>
+          ${rules ? `<details><summary>Rule-based ratio checks (not SHAP)</summary><ul>${rules}</ul></details>` : ""}
           ${llms ? `<h3>Written analysis</h3>${llms}` : ""}
           <details>
             <summary>Technical scores</summary>

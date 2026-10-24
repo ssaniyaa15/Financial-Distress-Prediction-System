@@ -105,8 +105,8 @@ def main() -> None:
 
     EVAL_RESULTS_PATH.write_text(json.dumps(results, indent=2), encoding="utf-8")
     rows = []
-    header = "| Approach | Accuracy | Precision | Recall | F1 | ROC-AUC |"
-    sep = "| --- | ---: | ---: | ---: | ---: | ---: |"
+    header = "| Approach | Accuracy | Precision | Recall | F1 | ROC-AUC | PR-AUC |"
+    sep = "| --- | ---: | ---: | ---: | ---: | ---: | ---: |"
     order = [
         "Structured Only",
         "Text Only",
@@ -119,10 +119,10 @@ def main() -> None:
     for name in order:
         m = results[name]
         rows.append(
-            f"| {name} | {m['accuracy']:.4f} | {m['precision']:.4f} | {m['recall']:.4f} | {m['f1']:.4f} | {m['roc_auc']:.4f} |"
+            f"| {name} | {m['accuracy']:.4f} | {m['precision']:.4f} | {m['recall']:.4f} | {m['f1']:.4f} | {m['roc_auc']:.4f} | {m['pr_auc']:.4f} |"
         )
     markdown = "\n".join([header, sep, *rows])
-    table = pd.DataFrame(results).T[["accuracy", "precision", "recall", "f1", "roc_auc"]]
+    table = pd.DataFrame(results).T[["accuracy", "precision", "recall", "f1", "roc_auc", "pr_auc"]]
     (EVAL_RESULTS_PATH.parent / "comparison.md").write_text(
         "# Held-out test comparison\n\n" + markdown + "\n",
         encoding="utf-8",

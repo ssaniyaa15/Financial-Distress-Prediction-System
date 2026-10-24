@@ -8,6 +8,7 @@ from typing import Any
 import numpy as np
 
 from shared.dataset import load_companies
+from shared.explain import format_shap_factor
 from shared.inference import ModelBundle, image_from_path
 from shared.llm import ensemble_llm_outputs
 from shared.metrics import risk_level_from_score
@@ -142,12 +143,33 @@ def risk_prediction(state: dict[str, Any]) -> dict[str, Any]:
     ]
     present = [float(p) for p in parts if p is not None]
     agreement = 1.0 - float(np.std(present)) if present else 0.5
+    # Heuristic, not a calibrated probability: this blends 0.45 with modality
+    # agreement (1 - std of scores). Do not treat it as a confidence interval
+    # or as Platt/isotonic-calibrated probability of bankruptcy.
     confidence = float(np.clip(0.45 + 0.5 * agreement, 0.05, 0.99))
+    features = state.get("features") or {}
+    rule_factors = contributing_factors(features, final)
+    bundle = get_bundle()
+    shap_items: list[dict[str, Any]] = []
+    try:
+        shap_items = bundle.shap_explanations(features, k=5)
+    except Exception:
+        shap_items = []
+    shap_factors = [format_shap_factor(item) for item in shap_items]
+    threshold = bundle.decision_threshold
+    structured_risk = state.get("structured_risk")
     return {
         "final_risk_score": final,
         "risk_level": risk_level_from_score(final),
         "confidence": confidence,
-        "contributing_factors": contributing_factors(state.get("features") or {}, final),
+        "contributing_factors": shap_factors or rule_factors,
+        "shap_explanations": shap_items,
+        "rule_based_factors": rule_factors,
+        "explanation_source": "shap" if shap_factors else "rule_based",
+        "decision_threshold": threshold,
+        "structured_predicted_label": (
+            int(float(structured_risk) >= threshold) if structured_risk is not None else None
+        ),
     }
 
 
@@ -166,6 +188,11 @@ def generate_report(state: dict[str, Any]) -> dict[str, Any]:
         "risk_level": state.get("risk_level"),
         "confidence": state.get("confidence"),
         "contributing_factors": state.get("contributing_factors"),
+        "shap_explanations": state.get("shap_explanations") or [],
+        "rule_based_factors": state.get("rule_based_factors") or [],
+        "explanation_source": state.get("explanation_source") or "rule_based",
+        "decision_threshold": state.get("decision_threshold"),
+        "structured_predicted_label": state.get("structured_predicted_label"),
         "llm_outputs": state.get("llm_outputs"),
         "ocr_text": (state.get("ocr_text") or "")[:4000],
         "extracted_fields": state.get("extracted_fields") or {},

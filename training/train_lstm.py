@@ -115,10 +115,11 @@ def main() -> None:
         val_pred = (val_proba >= 0.5).astype(int)
         val_metrics = classification_metrics(y_val, val_pred, val_proba)
         logger.info(
-            "epoch %s loss=%.4f val_auc=%.4f val_f1=%.4f",
+            "epoch %s loss=%.4f val_auc=%.4f val_pr_auc=%.4f val_f1=%.4f",
             epoch,
             running / len(train),
             val_metrics["roc_auc"],
+            val_metrics["pr_auc"],
             val_metrics["f1"],
         )
         if val_metrics["roc_auc"] > best_auc:

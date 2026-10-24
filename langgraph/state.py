@@ -24,5 +24,10 @@ class RiskState(TypedDict, total=False):
     risk_level: str
     confidence: float
     contributing_factors: list[str]
+    shap_explanations: list[dict[str, Any]]
+    rule_based_factors: list[str]
+    explanation_source: str
+    decision_threshold: float
+    structured_predicted_label: int
     report: dict[str, Any]
     errors: list[str]

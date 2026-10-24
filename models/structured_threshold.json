@@ -1,0 +1,6 @@
+{
+  "threshold": 0.62,
+  "metric": "f1",
+  "split": "val",
+  "val_f1": 0.62
+}

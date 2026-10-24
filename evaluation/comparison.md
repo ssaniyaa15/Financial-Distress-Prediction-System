@@ -4,6 +4,9 @@ Metrics come from the official 20% test split of the UCI Polish year-3 bankruptc
 The Multimodal + LLM row uses the heuristic financial analyzer in this run because
 `OPENAI_API_KEY` / `GEMINI_API_KEY` / `GROQ_API_KEY` were unset. No scores were invented.
 
+F1 below is at the default 0.5 threshold. Re-run `python evaluation/evaluate.py` to add
+a PR-AUC column (average precision; relevant because the positive class is ~5%).
+
 | Approach | Accuracy | Precision | Recall | F1 | ROC-AUC |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Structured Only | 0.9557 | 0.5294 | 0.5455 | 0.5373 | 0.9176 |

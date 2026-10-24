@@ -1,6 +1,6 @@
 {
   "dataset": "UCI Polish Companies Bankruptcy (3rd year)",
-  "source_csv": "/Users/vardaanagrawal/VARDAAN/COLLEGE/coding/finalFINANCE/data/raw/bankruptcy_year3.csv",
+  "source_csv": "C:\\PROJECTS\\finalFINANCE\\data\\raw\\bankruptcy_year3.csv",
   "citation": "Zieba, Tomczak, Tomczak (2016). Expert Systems with Applications.",
   "license": "CC BY 4.0",
   "n_rows": 10503,

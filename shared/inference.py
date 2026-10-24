@@ -19,15 +19,18 @@ from PIL import Image
 from shared.charts import chart_to_chw, render_ratio_chart
 from shared.config import (
     EARLY_FUSION_PATH,
+    DECISION_THRESHOLD_PATH,
     INTERMEDIATE_FUSION_PATH,
     LATE_FUSION_PATH,
     LSTM_MODEL_PATH,
     LSTM_VOCAB_PATH,
     PREPROCESSOR_PATH,
+    SHAP_EXPLAINER_PATH,
     STRUCTURED_MODEL_PATH,
     TFIDF_MODEL_PATH,
     VISION_MODEL_PATH,
 )
+from shared.explain import TREE_MODEL_NAMES, build_tree_explainer, explain_structured_row
 from shared.features import FEATURE_COLUMNS
 from shared.llm import available_analyzers, ensemble_llm_outputs
 from shared.metrics import risk_level_from_score
@@ -35,6 +38,7 @@ from shared.nn_models import IntermediateFusionNet, RiskCNN, RiskLSTM
 from shared.preprocessing import StructuredPreprocessor
 from shared.schemas import LLMRiskOutput
 from shared.text_data import load_vocab, texts_to_sequences
+from shared.threshold import load_decision_threshold
 
 
 def _torch_device() -> torch.device:
@@ -56,6 +60,26 @@ class ModelBundle:
         packed = joblib.load(STRUCTURED_MODEL_PATH)
         self.structured_model = packed["model"]
         self.structured_name = packed.get("name", "structured")
+        self.decision_threshold = load_decision_threshold()
+        if not DECISION_THRESHOLD_PATH.exists():
+            packed_threshold = packed.get("threshold")
+            if packed_threshold is not None:
+                try:
+                    self.decision_threshold = float(packed_threshold)
+                except (TypeError, ValueError):
+                    pass
+        self.shap_explainer = None
+        if SHAP_EXPLAINER_PATH.exists():
+            try:
+                shap_pack = joblib.load(SHAP_EXPLAINER_PATH)
+                self.shap_explainer = shap_pack.get("explainer")
+            except Exception:
+                self.shap_explainer = None
+        if self.shap_explainer is None and self.structured_name in TREE_MODEL_NAMES:
+            try:
+                self.shap_explainer = build_tree_explainer(self.structured_model)
+            except Exception:
+                self.shap_explainer = None
         self.tfidf = joblib.load(TFIDF_MODEL_PATH) if TFIDF_MODEL_PATH.exists() else None
         self.vocab = load_vocab(LSTM_VOCAB_PATH)
         lstm_pack = torch.load(LSTM_MODEL_PATH, map_location=self.device, weights_only=False)
@@ -92,6 +116,12 @@ class ModelBundle:
 
     def structured_vector(self, features: Mapping[str, Any]) -> np.ndarray:
         return self.preprocessor.transform(self._feature_frame(features))[0]
+
+    def shap_explanations(self, features: Mapping[str, Any], k: int = 5) -> list[dict[str, Any]]:
+        if self.shap_explainer is None:
+            return []
+        X = self.preprocessor.transform(self._feature_frame(features))
+        return explain_structured_row(self.shap_explainer, X, FEATURE_COLUMNS, k=k)
 
     @torch.no_grad()
     def text_proba_and_embedding(self, narrative: str) -> tuple[float, np.ndarray]:
